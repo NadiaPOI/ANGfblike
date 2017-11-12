@@ -19,8 +19,12 @@ export class ConnexionService {
       console.log('Vous êtes connecté(e)');
 
       // Naviguer vers la vue connected
-      this.router.navigateByUrl('/connected')
-      
+      this.router.navigateByUrl('/connected');
+
+      // Générer des cookies de connexion Attention : pas sécurisé
+      document.cookie = "cookieLogin=" + infos.login;
+      document.cookie = "cookiePassword=" + infos.password;
+
     }else{
       console.log('Accès refusé');
     }

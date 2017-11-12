@@ -10,6 +10,7 @@ export class ConnectedComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
